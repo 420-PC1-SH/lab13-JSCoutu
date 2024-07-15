@@ -30,4 +30,8 @@ describe("transmission processor", function () {
         const expectedError = new Error('Data is invalid ; should contain "<"');
         expect(() => { processor("9701::489584872710>"); }).toThrow(expectedError);
     });
+    test("throws error if '>' not found", function () {
+        const expectedError = new Error('Data is invalid ; should contain ">"');
+        expect(() => { processor("9701::489584872710>"); }).toThrow(expectedError);
+    });
 });
