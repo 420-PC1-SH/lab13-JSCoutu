@@ -32,4 +32,9 @@ describe("return of function greet", function(){
         let result = greet(name);
         expect(result).toEqual("Hello, Jango and Boba")
     });
+    test("parameter passed is a table with more then 2 components", function(){
+        let name = ["Jill", "Jane", "Leia"];
+        let result = greet(name);
+        expect(result).toEqual("Hello, Jill, Jane and Leia")
+    });
 })
