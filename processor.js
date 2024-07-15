@@ -20,7 +20,9 @@ function processor(transmission) {
     if (isNaN(id)){
         throw new Error('Data is invalid ; id cannot be converted in a number');
     }
-    
+    if (isNaN(rawDataNumers[1])){
+        throw new Error('Data is invalid ; rawDataNumers must contain only number');
+    }
 
     return {
         id: Number(parts[0]),
