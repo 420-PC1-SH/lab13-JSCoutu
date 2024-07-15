@@ -27,4 +27,9 @@ describe("return of function greet", function(){
         let result = greet(name);
         expect(result).toEqual("HELLO HAN")
     });
+    test("parameter passed is a table with 2 components", function(){
+        let name = ["Jango", "Boba"];
+        let result = greet(name);
+        expect(result).toEqual("Hello, Jango and Boba")
+    });
 })
