@@ -22,4 +22,9 @@ describe("return of function greet", function(){
         let result = greet(name);
         expect(result).toEqual("Hello there")
     });
+    test("name passed is in capital letters only", function(){
+        let name = "HAN";
+        let result = greet(name);
+        expect(result).toEqual("HELLO HAN")
+    });
 })
