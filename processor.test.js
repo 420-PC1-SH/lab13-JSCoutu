@@ -42,4 +42,8 @@ describe("transmission processor", function () {
         const expectedError = new Error('Data is invalid ; id cannot be converted in a number');
         expect(()=> { processor("patate::<489584872710>"); }).toThrow(expectedError)
     });
+    test("rawData must contain only number", function () {
+        const expectedError = new Error('Data is invalid ; rawDataNumers must contain only number');
+        expect(()=> { processor("9701::<48abc4872710>"); }).toThrow(expectedError)
+    });
 });
